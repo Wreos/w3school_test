@@ -51,8 +51,8 @@ describe('SQLTest', function () {
       .execute("window.editor.setCursor(editor.firstLine()); window.editor.setValue('SELECT * FROM Customers WHERE City=\"London\";');")
       .click('.ws-btn')
       .isVisible("xpath", "//*[text() = 'Number of Records: 6']")
-    browser.expect.elements('.w3-table-all>tbody>tr').count.to.equal(6 + titleRow); // первая строка всегда выводится - это заголовок
-    browser.end();
+      browser.expect.elements('.w3-table-all>tbody>tr').count.to.equal(6 + titleRow) // первая строка всегда выводится - это заголовок
+      browser.end();
   });
 
 
@@ -62,7 +62,7 @@ describe('SQLTest', function () {
       .click('.w3-btn')
       .acceptAlert()
       .isVisible("xpath", "//*[text() = 'The database is fully restored.']")
-    browser.end();
+      .end();
   });
 
 
